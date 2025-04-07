@@ -1,5 +1,5 @@
 
-def lock(key,IV,data,b=0):
+def lock(key: int,IV: int,data: int,b=0) -> int:
     if len(str(key)) < 11:
         return lock(str(key) + "0",IV,data,b)
     if b != 5:
@@ -30,7 +30,7 @@ def lock(key,IV,data,b=0):
         Answer = Answer + str(i)
     return Answer
 
-def unlock(key,IV, data,b=0):
+def unlock(key: int,IV: int, data: int,b=0) -> int:
     if len(str(key)) < 11:
         return unlock(str(key) + "0",IV,data,b)
     if b != 5:
@@ -86,7 +86,7 @@ def s_box(data,key,IV=False,unlock=False):
     return sBox
         
 
-def base(num, base):
+def base(num: int, base: int) -> int:
     num = int(num)
     if num == 0:
         return "0"
